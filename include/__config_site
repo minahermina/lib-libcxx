@@ -30,8 +30,14 @@
 #undef __FLT16_MANT_DIG__
 #endif
 
+// PSTL backends
+#define _LIBCPP_PSTL_BACKEND_STD_THREAD
+
+// Hardening.
+#define _LIBCPP_HARDENING_MODE_DEFAULT 2
+
 #ifdef CONFIG_LIBMUSL
-#define _LIBCPP_HAS_MUSL_LIBC
+#define _LIBCPP_HAS_MUSL_LIBC 1
 #endif
 
 #endif // _LIBCPP___CONFIG_SITE
